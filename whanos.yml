@@ -1,7 +1,9 @@
-test:
-  adapter: mysql2
-  encoding: utf8
-  database: sample
-  host: localhost
-  username: root
-  password: password
+deployment:
+  replicas: 3
+  resources:
+    limits:
+      memory: "128M"
+    requests:
+      memory: "64M"
+  ports:
+    - 3000
